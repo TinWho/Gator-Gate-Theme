@@ -45,7 +45,7 @@ Utilizing a lightweight forum platform like bbPress, combined with AI-generated 
 
 ## Live Preview
 For a live preview of this theme, you can visit.
-Https://tinfoilwho.com
+(https://tinfoilwho.com/forum/)
 
 ## License
 
