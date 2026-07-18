@@ -12,8 +12,8 @@ Using CSS to style a bbPress forum is exceptionally fast because it lets you cha
 By targeting bbPress’s native, highly structured HTML class system, the browser processes visual updates instantly through its hardware-accelerated rendering engine rather than forcing WordPress to rebuild pages on the server.
 
  
-##Why CSS Outperforms Alternative bbPress Styling Methods
-##The Core Technical Drivers Of This Speed
+## Why CSS Outperforms Alternative bbPress Styling Methods
+## The Core Technical Drivers Of This Speed
 
 1. Eliminating WordPress Server Processing (PHP & MySQL Overheads)
 Every time a user visits a forum page, WordPress has to work behind the scenes. If you use PHP template files or plugins to change layouts, the server must run code, look up database entries, and assemble the HTML from scratch. CSS completely bypasses this. Because CSS runs purely in the user’s browser, the server simply hands over a static file and stops working, dramatically lowering your server’s CPU usage.
@@ -42,7 +42,7 @@ When you use CSS properties like ‘transform’ for hover effects, or ‘opacit
 ##Conclusion
 Utilizing a lightweight forum platform like bbPress, combined with AI-generated CSS, allows for a modern, high-performance community site without the constraints of traditional, bloated forum software. This approach ensures maximum design flexibility, rapid load speeds, and minimal database usage.
 
-##Live Preview
+## Live Preview
 For a live preview of this theme, you can visit.
 Https://tinfoilwho.com
 
