@@ -56,10 +56,10 @@ It's a work in progress; there is still some backend work needed.
 ### How To Install
 
 Install a code snippets plugin such as Fluent Snippets or use your preferred CSS management method.
-Copy the theme CSS code into a dedicated CSS snippet/file.
+Copy the theme CSS code into a dedicated stylesheet or CSS snippet.
 Enable the snippet to apply the styling to your bbPress forum.
 
-Using a snippets system allows you to easily enable, disable, and manage the theme without modifying core theme files.
+Using a snippets system allows you to easily enable, disable, update, and manage the theme without modifying core theme files.
 
 ## License
 
