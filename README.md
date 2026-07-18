@@ -1,10 +1,10 @@
 # Gator-Gate-Theme
 Gator-Gate-Theme is a modern dark-mode CSS theme for bbPress focused on performance, clean UI design, and advanced visual customisation. Features custom layouts, responsive styling, improved typography, card-based forum presentation, hover effects, and a refined user experience without adding unnecessary overhead.
 
-##bbPress has a unique position
+### bbPress has a unique position
 It has a lightweight, powerful, minimalist engine designed for WordPress that virtually allows complete styling over its aesthetics. With a little bit of tuning, it can become a very powerful forum when you treat it like a foundation rather than a finished product.
 
-##Street Rep Pimp Your Ride 
+### Street Rep Pimp Your Ride 
 Now with AI, you can ask for any creative design you can imagine rather than being locked into any specific aesthetic in any other type of forum software. Like a sleek modern CSS theme for bbPress with various hover-over effects, and in one minute you’re 90% good.
 
 Using CSS to style a bbPress forum is exceptionally fast because it lets you change the forum’s entire design and layout on the client side without executing slow PHP template overrides or triggering additional database queries.
@@ -13,7 +13,7 @@ By targeting bbPress’s native, highly structured HTML class system, the browse
 
  
 ## Why CSS Outperforms Alternative bbPress Styling Methods
-## The Core Technical Drivers Of This Speed
+### The Core Technical Drivers Of This Speed
 
 1. Eliminating WordPress Server Processing (PHP & MySQL Overheads)
 Every time a user visits a forum page, WordPress has to work behind the scenes. If you use PHP template files or plugins to change layouts, the server must run code, look up database entries, and assemble the HTML from scratch. CSS completely bypasses this. Because CSS runs purely in the user’s browser, the server simply hands over a static file and stops working, dramatically lowering your server’s CPU usage.
@@ -39,7 +39,7 @@ Page builders, theme frameworks, and layout plugins inject massive libraries fil
 8. Direct Hardware Acceleration via the Device GPU
 When you use CSS properties like ‘transform’ for hover effects, or ‘opacity’ for read/unread forum status badges, the browser bypasses the computer’s primary processor (CPU) and hands the rendering tasks directly to the graphics card (GPU). The GPU is purpose-built to handle complex pixel math and visual layers concurrently. By styling with native CSS instead of heavy scripts, your forum benefits from ultra-smooth animations, fluid scrolling, and snappy element transitions even on low-end mobile devices.
  
-##Conclusion
+### Conclusion
 Utilizing a lightweight forum platform like bbPress, combined with AI-generated CSS, allows for a modern, high-performance community site without the constraints of traditional, bloated forum software. This approach ensures maximum design flexibility, rapid load speeds, and minimal database usage.
 
 ## Live Preview
