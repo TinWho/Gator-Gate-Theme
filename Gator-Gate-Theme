@@ -1,0 +1,1715 @@
+
+/*
+ * Name:       Gator-Gate Theme bbPress
+ * Description:       CSS Theme for bbPress.
+ * Version:                 0.1.0 Alpha
+ * Author:      Tin Who
+ * Author URI:  https://tinfoilwho.com
+ * License:                 GPL-2.0-or-later
+ *
+ * AI-generated/AI-assisted code provided AS-IS.
+ * User assumes all risk and responsibility for use.
+ */
+
+
+
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS DARK BLUE THEME
+   PART 1: CORE CONTAINER & PAGE LAYOUT
+   ========================================================================== */
+
+
+/* ==========================================================================
+   DESKTOP FORUM WIDTH EXPANSION
+   
+   bbPress normally sits inside the WordPress theme container.
+   This pushes the forum area wider so it uses more screen space.
+   
+   Only applies above tablet size.
+   ========================================================================== */
+
+@media (min-width: 992px) {
+
+    #bbpress-forums {
+
+        /* Allow forum container to expand */
+        width: auto !important;
+
+        /* Remove theme maximum width restrictions */
+        max-width: none !important;
+
+        /*
+        Pull right side closer to sidebar/page edge.
+        NOTE:
+        Your old code had "0x" which is invalid CSS.
+        It should be 0px.
+        */
+        margin-left: 0px !important;
+        margin-right: -60px !important;
+    }
+
+}
+
+
+/* ==========================================================================
+   MAIN BBPRESS OUTER CONTAINER
+
+   This controls the large dark blue panel surrounding the forum.
+
+   Creates:
+   - dark background
+   - rounded corners
+   - shadow
+   - internal spacing
+   ========================================================================== */
+
+#bbpress-forums {
+
+    /* Modern system font stack */
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif !important;
+
+
+    /* Default forum text size */
+    font-size: 15px !important;
+
+
+    /* Comfortable reading spacing */
+    line-height: 1.6 !important;
+
+
+    /* Main text colour */
+    color: #cbd5e1 !important;
+
+
+    /* Midnight blue background */
+    background: #0b1329 !important;
+
+
+    /* Space inside forum edges */
+    padding: 30px !important;
+
+
+    /* Rounded modern card shape */
+    border-radius: 16px !important;
+
+
+    /* Floating panel shadow */
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3) !important;
+
+
+    /*
+    Ensures padding does not increase
+    the total width calculation.
+    */
+    box-sizing: border-box !important;
+
+}
+
+
+
+/* ==========================================================================
+   GLOBAL BBPRESS LINKS
+   
+   Controls all links inside forum:
+   - forum names
+   - topics
+   - usernames
+   - breadcrumbs
+   ========================================================================== */
+
+#bbpress-forums a {
+
+    /* Electric blue link colour */
+    color: #38bdf8 !important;
+
+
+    /* Remove default underline */
+    text-decoration: none !important;
+
+
+    /*
+    Smooth colour change when hovering.
+    This happens in the visitor browser,
+    not on the server/database.
+    */
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease !important;
+
+}
+
+
+
+/* ==========================================================================
+   MAIN FORUM BACKGROUND BLOCKS
+   
+   Removes white gaps created by some WordPress themes.
+
+   Applies the dark theme to:
+   - forum archive
+   - forum lists
+   - forum body areas
+   ========================================================================== */
+
+
+#bbpress-forums,
+.forum-archive,
+#bbpress-forums ul.bbp-forums,
+#bbpress-forums li.bbp-body {
+
+
+    background-color: #0b1329 !important;
+
+
+    background: #0b1329 !important;
+
+
+    /* Rounded modern panels */
+    border-radius: 16px !important;
+
+
+    /* Soft depth */
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3) !important;
+
+
+    box-sizing: border-box !important;
+
+}
+
+
+/* ==========================================================================
+   END PART 1
+   ========================================================================== */
+
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS DARK BLUE THEME
+   PART 2: CLEANUP + TITLE BRANDING
+   ========================================================================== */
+
+
+/* ==========================================================================
+   HIDE BBPRESS LOGIN ELEMENTS
+   
+   Removes:
+   - bbPress login form
+   - logged out notices
+   - sidebar bbPress login widget
+   
+   Useful when WordPress already handles user login.
+   ========================================================================== */
+
+
+#bbpress-forums #bbp-login-form,
+#bbpress-forums .bbp-login-form,
+#bbpress-forums .bbp-logged-out,
+.widget_bbp_login_widget {
+
+    display: none !important;
+
+}
+
+
+
+/* ==========================================================================
+   HIDE BBPRESS SEARCH BAR
+   
+   Removes the search box from the forum page.
+
+   Search can still exist through WordPress search
+   or a custom navigation search.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-search-form {
+
+    display: none !important;
+
+}
+
+
+
+/* ==========================================================================
+   REMOVE SUBFORUM COMMAS
+   
+   bbPress normally outputs:
+
+   Forum A, Forum B, Forum C
+
+   This removes the comma separators.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-forum.css-sep::after {
+
+    content: none !important;
+
+}
+
+
+
+/* ==========================================================================
+  Gator-Gate-Theme - FORUM ARCHIVE TITLE
+   
+   WordPress normally displays:
+   
+   "Forums"
+
+   This hides the original text
+   and replaces it visually.
+   ========================================================================== */
+
+
+.forum-archive .entry-title > a {
+
+    /*
+    Makes the original title invisible
+    while keeping the element active.
+    */
+    font-size: 0 !important;
+
+}
+
+
+
+.forum-archive .entry-title > a::after {
+
+
+    /*
+    Inserts custom branding text.
+    */
+    content: "Gator-Gate-Theme";
+
+
+    /*
+    Visible replacement size.
+    */
+    font-size: 20px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS PAGE TITLE
+   
+   Used on bbPress pages where WordPress
+   outputs a normal page heading.
+   ========================================================================== */
+
+
+.bbpress .page .entry-title {
+
+
+    /*
+    Hide original page title text.
+    */
+    font-size: 0 !important;
+
+
+    /*
+    Creates breathing space above title.
+    */
+    padding-top: 40px;
+
+
+}
+
+
+
+.bbpress .page .entry-title::after {
+
+
+    /*
+    Replace hidden title.
+    */
+    content: "Gator-Gate-Theme";
+
+
+    font-size: 20px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   SPACE AFTER HIDDEN ARCHIVE TITLE
+   
+   Because the original heading is hidden,
+   content needs a little separation.
+   ========================================================================== */
+
+
+.forum-archive .entry-content {
+
+    margin-top: 20px;
+
+}
+
+
+
+/* ==========================================================================
+   SINGLE TOPIC TITLE SIZE
+   
+   Controls individual topic page heading.
+   ========================================================================== */
+
+
+.single-topic .entry-title {
+
+    font-size: 20px !important;
+
+}
+
+
+
+/* ==========================================================================
+   SINGLE FORUM + TOPIC TITLES
+   
+   Keeps headings consistent.
+   ========================================================================== */
+
+
+.single-topic .entry-title,
+.single-forum .entry-title {
+
+    font-size: 20px !important;
+
+}
+
+
+
+/* ==========================================================================
+   HIDE TOPIC/FORUM HEADER LABEL BAR
+   
+   Removes the bbPress bar showing:
+
+   Topic
+   Voices
+   Posts
+   Freshness
+
+   Gives a cleaner modern look.
+   ========================================================================== */
+
+
+#bbpress-forums li.bbp-header,
+#bbpress-forums .bbp-header,
+#bbpress-forums ul.bbp-replies li.bbp-header,
+#bbpress-forums ul.bbp-topics li.bbp-header {
+
+
+    display: none !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   HIDE BOTTOM FOOTER LABELS
+   
+   Removes:
+   - bottom bbPress footer bar
+   - pagination counter text
+   ========================================================================== */
+
+
+#bbpress-forums li.bbp-footer,
+#bbpress-forums div.bbp-pagination,
+#bbpress-forums .bbp-pagination-count {
+
+
+    display: none !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   END PART 2
+   ========================================================================== */
+
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS DARK BLUE THEME
+   PART 3: FORUM LISTS + SUBFORUM DESIGN
+   ========================================================================== */
+
+
+/* ==========================================================================
+   FORUM AND TOPIC ROW CONTAINERS
+   
+   Creates the modern card appearance:
+
+   - dark slate background
+   - rounded corners
+   - spacing between rows
+   - subtle border
+
+   ========================================================================== */
+/*main page forum row color*/
+
+#bbpress-forums li.bbp-body ul.forum,
+#bbpress-forums li.bbp-body ul.topic {
+
+
+    /* Card background */
+    background: #111a36 !important;
+
+
+    /* Very subtle outline */
+    border: 1px solid rgba(255,255,255,0.04) !important;
+
+
+    /* Rounded card corners */
+    border-radius: 12px !important;
+
+
+    /* Space inside cards */
+    padding: 20px 24px !important;
+
+
+    /* Space between cards */
+    margin-bottom: 10px !important;
+
+
+    /*
+    bbPress uses list layouts.
+    Flex makes alignment cleaner.
+    */
+    display: flex !important;
+
+
+    /*
+    Keeps text and counters vertically centred.
+    */
+    align-items: center !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   REMOVE OLD BBPRESS LIST BACKGROUND
+   
+   Allows our custom cards to control colours.
+   ========================================================================== */
+
+
+#bbpress-forums ul.bbp-forums,
+#bbpress-forums ul.bbp-topics {
+
+
+    border: none !important;
+
+    background: transparent !important;
+
+}
+
+
+
+/* ==========================================================================
+   UNIFORM FORUM CARD COLOUR
+   
+   All forums and topics use the same
+   dark blue card background.
+   Removes alternating rows.
+   ========================================================================== */
+
+#bbpress-forums li.bbp-body ul.forum,
+#bbpress-forums li.bbp-body ul.topic {
+
+    background: #111a36 !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* ==========================================================================
+   FORUM TITLE LINKS
+   
+   Controls the main forum name.
+
+   Example:
+
+   General Discussion
+
+   ========================================================================== */
+
+
+#bbpress-forums li.bbp-forum-info .bbp-forum-title,
+#bbpress-forums li.bbp-topic-title .bbp-topic-permalink {
+
+
+    font-size: 18px !important;
+
+
+    font-weight: 600 !important;
+
+
+    color: #ffffff !important;
+
+
+    display: block !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   FORUM DESCRIPTION AND META
+   
+   Smaller supporting text.
+
+   Example:
+
+   Last post by user
+   Description text
+
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-forum-content,
+#bbpress-forums .bbp-topic-meta {
+
+
+    font-size: 13px !important;
+
+
+    color: #94a3b8 !important;
+
+
+    margin: 0 !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   TOPIC / POST COUNTERS
+   
+   Controls numbers:
+
+   Topics
+   Posts
+   Replies
+
+   ========================================================================== */
+
+
+#bbpress-forums li.bbp-forum-topic-count,
+#bbpress-forums li.bbp-forum-reply-count,
+#bbpress-forums li.bbp-topic-voice-count,
+#bbpress-forums li.bbp-topic-reply-count {
+
+
+    font-size: 16px !important;
+
+
+    font-weight: 700 !important;
+
+
+    color: #ffffff !important;
+
+
+    text-align: center !important;
+
+
+}
+
+
+
+/* Add labels below numbers */
+
+
+#bbpress-forums li.bbp-forum-topic-count::after {
+
+
+    content: " topics";
+
+
+    display: block;
+
+
+    font-size: 10px;
+
+
+    color: #64748b;
+
+
+    text-transform: uppercase;
+
+
+}
+
+
+
+#bbpress-forums li.bbp-forum-reply-count::after {
+
+
+    content: " posts";
+
+
+    display: block;
+
+
+    font-size: 10px;
+
+
+    color: #64748b;
+
+
+    text-transform: uppercase;
+
+
+}
+
+
+
+/* ==========================================================================
+   CLEAN SUBFORUM LIST
+   
+   This replaces the old "chip" style.
+
+   Before:
+
+   [Subforum 1] [Subforum 2]
+
+   After:
+
+       Subforum 1
+       Subforum 2
+
+   Yellow text only.
+   No boxes.
+   No shadows.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-forums-list {
+
+
+    display: flex !important;
+
+
+    flex-direction: column !important;
+
+
+    gap: 2px !important;
+
+
+    margin: 8px 0 0 15px !important;
+
+
+    padding: 0 !important;
+
+
+    border: none !important;
+
+
+    background: transparent !important;
+
+
+}
+
+
+
+/* Individual subforum items */
+
+
+#bbpress-forums .bbp-forums-list li {
+
+
+    display: block !important;
+
+
+    margin: 0 !important;
+
+
+    padding: 0 !important;
+
+
+    list-style: none !important;
+
+
+    background: transparent !important;
+
+
+}
+
+
+
+/* Yellow subforum links */
+
+
+#bbpress-forums .bbp-forums-list li a {
+
+
+    color: #eded1f !important;
+
+
+    background: transparent !important;
+
+
+    border: none !important;
+
+
+    padding: 0 !important;
+
+
+    border-radius: 0 !important;
+
+
+    font-size: 14px !important;
+
+
+    line-height: 1.4 !important;
+
+
+    text-decoration: none !important;
+
+
+}
+
+
+
+/* Subforum hover */
+
+
+#bbpress-forums .bbp-forums-list li a:hover {
+
+
+    color: #fafa5f !important;
+
+
+    background: transparent !important;
+
+
+    text-decoration: underline !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   END PART 3
+   ========================================================================== */
+
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS DARK BLUE THEME
+   PART 4: TOPICS, REPLIES & USER PANELS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   POST CONTAINER BACKGROUND
+   
+   Controls the entire submitted post area.
+
+   Gives posts a darker blue card style.
+   ========================================================================== */
+
+
+#bbpress-forums ul.bbp-replies li.bbp-body div.hentry {
+
+
+    background-color: #051326 !important;
+
+
+    color: #ffffff !important;
+
+
+    /*
+    Cyan outline around individual posts.
+    */
+    border: 1px solid #00ffff !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   AUTHOR PROFILE COLUMN
+   
+   Left side of a reply.
+
+   Contains:
+   - avatar
+   - username
+   - role
+   - IP address
+   
+   ========================================================================== */
+
+
+#bbpress-forums div.bbp-reply-author,
+#bbpress-forums div.bbp-topic-author,
+#bbpress-forums .bbp-body .bbp-reply-author,
+.bbp-reply-author {
+
+
+    /*
+    Slightly lighter blue panel
+    separates the user from the post.
+    */
+    background-color: #0A1424 !important;
+    background: #0A1424 !important;
+
+
+    /*
+    Soft border separation.
+    */
+    border: 1px solid #245E80 !important;
+
+
+    /* Inner spacing */
+    padding: 16px !important;
+
+
+    /* Rounded corners */
+    border-radius: 10px !important;
+
+
+    /*
+    Centres avatar and profile information.
+    */
+    text-align: center !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   POST CONTENT COLUMN
+   
+   Right side message area.
+   ========================================================================== */
+
+
+#bbpress-forums div.bbp-reply-content,
+#bbpress-forums div.bbp-topic-content,
+#bbpress-forums .bbp-body .bbp-reply-content,
+.bbp-reply-content {
+
+
+    /*
+    Slightly darker than author box.
+    */
+    background-color: #0b1121 !important;
+
+
+    background: #0b1121 !important;
+
+
+    /*
+    Very subtle separation.
+    */
+    border: 1px solid rgba(255,255,255,0.04) !important;
+
+
+    color: #cbd5e1 !important;
+
+
+    /* Message breathing room */
+    padding: 24px !important;
+
+
+    border-radius: 10px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   USERNAME DISPLAY
+   
+   Controls author name.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-reply-author a.bbp-author-name,
+#bbpress-forums .bbp-topic-author a.bbp-author-name {
+
+
+    color: #ffffff !important;
+
+
+    font-weight: 700 !important;
+
+
+    font-size: 15px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   USER ROLE
+   
+   Example:
+
+   Keymaster
+   Moderator
+   Participant
+
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-reply-author .bbp-author-role,
+#bbpress-forums .bbp-topic-author .bbp-author-role {
+
+
+    color: #38bdf8 !important;
+
+
+    font-weight: 700 !important;
+
+
+    font-size: 11px !important;
+
+
+    text-transform: uppercase !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   AUTHOR IP ADDRESS
+   
+   Small technical information.
+
+   Uses monospace so IP addresses align better.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-author-ip,
+#bbpress-forums .bbp-reply-author .bbp-author-ip {
+
+
+    color: #94a3b8 !important;
+
+
+    font-size: 10px !important;
+
+
+    font-family: monospace !important;
+
+
+    display: block !important;
+
+
+    margin-top: 8px !important;
+
+
+    /*
+    Prevent long IPv6 addresses
+    breaking the layout.
+    */
+    word-break: break-all !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   AVATAR SIZE
+   
+   Forces consistent profile images.
+
+   ========================================================================== */
+
+
+body #bbpress-forums div.bbp-reply-author a img.avatar,
+body #bbpress-forums .bbp-user-section img.avatar {
+
+
+    width: 80px !important;
+
+
+    height: 80px !important;
+
+
+    max-width: 80px !important;
+
+
+    max-height: 80px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   AUTHOR LINK COLOUR
+   
+   Link below username.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-author-link {
+
+
+    color: #00ffff !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   AVATAR ROUND STYLE
+   
+   Makes avatars circular.
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-reply-author img.avatar,
+#bbpress-forums .avatar,
+.bbp-author-avatar img {
+
+
+    border-radius: 50% !important;
+
+
+    border: 2px solid #1c2541 !important;
+
+
+    transition:
+        all 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+
+
+}
+
+
+
+/* Avatar hover effect */
+
+
+#bbpress-forums .bbp-reply-author img.avatar:hover,
+#bbpress-forums .avatar:hover,
+.bbp-author-avatar img:hover {
+
+
+    /*
+    Slight zoom and rotation.
+    Browser only effect.
+    No database/server load.
+    */
+    transform: scale(1.15) rotate(15deg) !important;
+
+
+    border-color: #38bdf8 !important;
+
+
+    box-shadow:
+        0 0 15px rgba(56,189,248,0.4) !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   END PART 4
+   ========================================================================== */
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS DARK BLUE THEME
+   PART 5: EDITOR + MOBILE + NAVIGATION
+   ========================================================================== */
+
+
+/* ==========================================================================
+   POST EDITOR TEXT AREA
+   
+   Controls the box where users type replies.
+
+   ========================================================================== */
+
+
+#bbpress-forums fieldset.bbp-form textarea.bbp-the-content {
+
+
+    /*
+    Dark writing area matching the forum.
+    */
+    background-color: #051326 !important;
+
+
+    /*
+    White text while typing.
+    */
+    color: #ffffff !important;
+
+
+    /*
+    Purple/dark border.
+    */
+    border: 1px solid #361037 !important;
+
+
+    /*
+    Comfortable writing size.
+    */
+    font-size: 16px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   MOBILE EDITOR FIXES
+   
+   WordPress TinyMCE sometimes keeps desktop
+   widths on mobile devices.
+
+   These rules force everything to fit.
+   ========================================================================== */
+
+
+@media screen and (max-width:768px) {
+
+
+    /*
+    Main editor containers.
+    */
+    #bbpress-forums fieldset.bbp-form,
+    #bbpress-forums .wp-editor-wrap,
+    #bbpress-forums .wp-editor-container {
+
+
+        width:100% !important;
+
+
+        max-width:100% !important;
+
+
+        min-width:0 !important;
+
+
+        box-sizing:border-box !important;
+
+
+        display:block !important;
+
+
+    }
+
+
+
+    /*
+    TinyMCE iframe and typing area.
+    */
+    #bbpress-forums iframe,
+    #bbpress-forums .quicktags-toolbar,
+    #bbpress-forums .wp-editor-area {
+
+
+        width:100% !important;
+
+
+        max-width:100% !important;
+
+
+        box-sizing:border-box !important;
+
+
+    }
+
+
+
+    /*
+    Allow toolbar buttons to wrap.
+
+    Prevents buttons running off screen.
+    */
+    .mce-container,
+    .mce-container-body,
+    .mce-toolbar-grp,
+    .mce-btn-group {
+
+
+        display:inline-block !important;
+
+
+        max-width:100% !important;
+
+
+        white-space:normal !important;
+
+
+    }
+
+
+
+    /*
+    Fix Visual/Text tabs.
+
+    Normally they can overlap buttons.
+    */
+    #bbpress-forums .wp-editor-tabs {
+
+
+        position:relative !important;
+
+
+        float:none !important;
+
+
+        display:block !important;
+
+
+        text-align:right !important;
+
+
+        margin-bottom:5px !important;
+
+
+    }
+
+
+
+    /*
+    Keeps editor content below tabs.
+    */
+    #bbpress-forums .wp-editor-container {
+
+
+        clear:both !important;
+
+
+        padding-top:0 !important;
+
+
+    }
+
+
+}
+
+
+
+/* ==========================================================================
+   BREADCRUMB NAVIGATION
+   
+   Controls:
+
+   Home > Forum > Topic
+
+   ========================================================================== */
+
+
+.bbp-breadcrumb,
+.bbp-breadcrumb span,
+.bbp-breadcrumb .bbp-breadcrumb-current,
+.bbp-breadcrumb a,
+.bbp-breadcrumb a.bbp-breadcrumb-root,
+#bbpress-forums .bbp-breadcrumb a {
+
+
+    font-size:14px !important;
+
+
+    color:#ffffff !important;
+
+
+    text-decoration:none !important;
+
+
+}
+
+
+
+/* Breadcrumb separator */
+
+
+#bbpress-forums div.bbp-breadcrumb .bbp-breadcrumb-sep {
+
+
+    color:#475569 !important;
+
+
+    padding:0 6px !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   EDIT / REPLY / MODERATION BUTTONS
+   
+   Makes action links look like buttons.
+
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-meta a.bbp-reply-to-link,
+#bbpress-forums .bbp-row-actions a {
+
+
+    color:#cbd5e1 !important;
+
+
+    background-color:#1e293b !important;
+
+
+    padding:4px 10px !important;
+
+
+    border-radius:4px !important;
+
+
+    font-size:11px !important;
+
+
+    border:1px solid #334155 !important;
+
+
+}
+
+
+
+/* Button hover */
+
+
+#bbpress-forums .bbp-meta a.bbp-reply-to-link:hover,
+#bbpress-forums .bbp-row-actions a:hover {
+
+
+    background-color:#38bdf8 !important;
+
+
+    color:#0a1128 !important;
+
+
+    border-color:#38bdf8 !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   END PART 5
+   ========================================================================== */
+/* ==========================================================================
+   Gator-Gate-Theme - BBPRESS DARK BLUE THEME
+   PART 6: HOVER EFFECTS & FINAL POLISH
+   ========================================================================== */
+
+
+/* ==========================================================================
+   GLOBAL LINK HOVER
+   
+   Changes links from bright blue to lighter blue
+   when the visitor moves their mouse over them.
+
+   Browser-side only.
+   ========================================================================== */
+
+
+#bbpress-forums a:hover {
+
+
+    color:#60a5fa !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   BREADCRUMB HOVER
+   
+   Makes navigation feel interactive.
+   ========================================================================== */
+
+
+.bbp-breadcrumb a:hover,
+.bbp-breadcrumb a.bbp-breadcrumb-root:hover {
+
+
+    text-decoration:underline !important;
+
+
+    color:#38bdf8 !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   FORUM CARD HOVER EFFECT
+   
+   When hovering a forum/topic:
+
+   - slightly lifts card upward
+   - adds shadow
+   - changes background
+
+   Creates a modern app-style feel.
+
+   ========================================================================== */
+
+
+#bbpress-forums li.bbp-body ul.forum:hover,
+#bbpress-forums li.bbp-body ul.topic:hover {
+
+
+    /*
+    Slight colour lift.
+    */
+    background:#152244 !important;
+
+
+
+    /*
+    Moves card upward 2 pixels.
+    */
+    transform:translateY(-2px) !important;
+
+
+
+    /*
+    Adds depth.
+    */
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.2) !important;
+
+
+
+    /*
+    Smooth movement.
+    */
+    transition:
+
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   SUBFORUM HOVER
+   
+   Keeps yellow links clean.
+
+   No boxes.
+   No shadows.
+
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-forums-list li a:hover {
+
+
+    color:#fafa5f !important;
+
+
+    background:transparent !important;
+
+
+    text-decoration:underline !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   FORM BUTTON HOVER
+   
+   Applies to submit buttons.
+
+   ========================================================================== */
+
+
+#bbpress-forums button.submit:hover {
+
+
+    background:#60a5fa !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   AVATAR ANIMATION
+   
+   Gives profile images a subtle interactive effect.
+
+   ========================================================================== */
+
+
+#bbpress-forums .bbp-reply-author img.avatar,
+#bbpress-forums .avatar,
+.bbp-author-avatar img {
+
+
+    transition:
+
+        all 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+
+
+}
+
+
+
+/*
+Avatar hover:
+
+- enlarge slightly
+- rotate
+- glow
+
+Pure CSS browser animation.
+*/
+
+
+#bbpress-forums .bbp-reply-author img.avatar:hover,
+#bbpress-forums .avatar:hover,
+.bbp-author-avatar img:hover {
+
+
+    transform:
+
+        scale(1.15) rotate(15deg) !important;
+
+
+
+    border-color:#38bdf8 !important;
+
+
+
+    box-shadow:
+
+        0 0 15px rgba(56,189,248,0.4) !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   FINAL SMALL CLEANUPS
+   
+   Removes leftover bbPress clutter.
+   ========================================================================== */
+
+
+/*
+Hide favourite toggle.
+*/
+#bbpress-forums .favorite-toggle {
+
+
+    display:none !important;
+
+
+}
+
+
+/*
+Hide unnecessary notices.
+*/
+#bbpress-forums div.bbp-template-notice,
+#bbpress-forums .bbp-template-notice.info {
+
+
+    display:none !important;
+
+
+}
+
+
+/*
+Remove empty spacing created by hidden elements.
+*/
+#bbpress-forums .bbp-meta {
+
+
+    margin:0 !important;
+
+
+}
+
+
+
+/* ==========================================================================
+   END PART 6
+   ========================================================================== */
+
+/* ==========================================================================
+   FINAL FORUM CARD COLOUR OVERRIDES
+   
+   Keep these last so they override earlier bbPress styles.
+   ========================================================================== */
+
+#bbpress-forums li.bbp-body ul.forum,
+#bbpress-forums li.bbp-body ul.topic {
+    background: #130530 !important;
+      border: 1px solid #331178 !important;
+}
+
+
+#bbpress-forums li.bbp-body ul.forum:hover,
+#bbpress-forums li.bbp-body ul.topic:hover {
+    background: #152244 !important;
+    border: 1px solid #38bdf8 !important;
+}
+
+/* Fix first forum card touching rounded container */
+
+#bbpress-forums li.bbp-body ul.forum:first-child {
+    margin-top: 10px !important;
+}
+
+
+/* ==========================================================================
+   Fix first topic row under breadcrumb touching container
+   ========================================================================== */
+
+#bbpress-forums li.bbp-body ul.topic:first-child {
+    margin-top: 10px !important;
+}
+/* ==========================================================================
+   Add spacing for topic section heading
+   ========================================================================== */
+
+#bbpress-forums ul.bbp-topics:before {
+    content: "Topics";
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
