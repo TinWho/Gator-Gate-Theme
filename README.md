@@ -44,10 +44,13 @@ When you use CSS properties like ‘transform’ for hover effects, or ‘opacit
 Utilizing a lightweight forum platform like bbPress, combined with AI-generated CSS, allows for a modern, high-performance community site without the constraints of traditional, bloated forum software. This approach ensures maximum design flexibility, rapid load speeds, and minimal database usage.
 
 ## Live Preview
+
+The CSS file should get you close to this without having to worry about any WordPress theme-specific coding. 
 For a live preview of this theme, you can visit.
 (https://tinfoilwho.com/forum/)
 
 ### Current Status
+
 It's a work in progress; there is still some backend work needed.
 
 ### How To Install
