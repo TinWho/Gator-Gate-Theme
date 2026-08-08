@@ -55,9 +55,14 @@ It's a work in progress; there is still some backend work needed.
 
 ### How To Install
 
-Install a code snippets plugin such as Fluent Snippets or use your preferred CSS management method.
-Copy the theme CSS code into a dedicated stylesheet or CSS snippet.
-Enable the snippet to apply the styling to your bbPress forum.
+ This project is currently distributed as standalone PHP code snippets.
+ Test all snippets in a sandbox or staging environment first. 
+ Exercise caution when installing or removing snippets.
+ Database effects and site behaviour may vary depending on your configuration.
+ Always back up your website and database before installing or modifying snippets.
+ The easiest installation method is to copy and paste the snippets into a WordPress code snippet manager, such as Fluent Snippets.
+
+
 
 Using a snippets system allows you to easily enable, disable, update, and manage the theme without modifying core theme files.
 
