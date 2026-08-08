@@ -1,6 +1,6 @@
 
 /*
- * Name:              Gator-Gate-Theme (Recent Topics Component)
+ * Name:              Gator-Gate-Theme (Recent Post/Topics Component)
  * Description:       CSS Theme for bbPress.
  * Version:                 0.1.0 Alpha
  * Author:      Tin Who
@@ -14,7 +14,7 @@
 
 
 /* ==========================================================================
-   Gator-Gate-Theme Recent Topics Component - BBPRESS DARK BLUE THEME
+   Gator-Gate-Theme Recent Post/Topics Component - BBPRESS DARK BLUE THEME
    CSS is included within the PHP
    PART 1: CORE CONTAINER & PAGE LAYOUT
 
