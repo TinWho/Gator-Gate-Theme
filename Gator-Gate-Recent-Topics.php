@@ -17,12 +17,10 @@
    Gator-Gate-Theme Recent Topics Component - BBPRESS DARK BLUE THEME
    CSS is included within the PHP
    PART 1: CORE CONTAINER & PAGE LAYOUT
+
+   How To Use; add the shortcode [gatorgate_recent_topics] to a page
    ========================================================================== */
 
-/*
-* Tin Foil Who
-* Project: bbPress GatorGate Recent Topics Widget - Part 1: Core Logic
-*/
 
 add_shortcode('gatorgate_recent_topics', 'gatorgate_recent_topics');
 
